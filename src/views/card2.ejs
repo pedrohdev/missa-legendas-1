@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card | Santa Missa @pedrohdev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: <%=colors[color].bg %>;
+            --text-color: <%=colors[color].text %>;
+        }
+
+        body,
+        html {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        * {
+            font-family: "Montserrat", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        /*
+            verde: 
+                background: #04A001;
+                color: #fff;
+        
+            branco:
+                background: #e9e9e9;
+                color: #2F972F;
+
+            vermelho:
+                background: #701111
+                color: #fff;
+
+            roxo
+                background: #4817AE;
+                color: #fff;
+            
+            rosa
+                background: #DA7685;
+                color: #fff;
+            preto
+                background: #000000;
+                color: #fff;
+        */
+        main {
+            max-width: 1100px;
+            height: 143px;
+            margin: 10px;
+            border-radius: 12px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            display: flex;
+            flex-direction: row;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .header {
+            border-right: 5px solid <%=hexToRgba(colors[color].bg, '0.5') %>;
+            height: calc(100% - 5px) !important;
+            align-self: center;
+            width: 60%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-radius: 10px 0 0px 10PX;
+        }
+
+        .title {
+            width: 40%;
+            display: grid;
+            flex-direction: column;
+        }
+
+        .header p {
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+            font-weight: 700;
+            font-size: 2.3rem;
+            word-wrap: break-word;
+        }
+
+
+
+        p.tempo {
+            word-wrap: normal;
+            margin-bottom: 2px;
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+
+        p.another {
+            /* 
+                margin-bottom: 2px; */
+            margin-top: 1px;
+            font-size: 1.15rem;
+            opacity: 0.8;
+        }
+
+
+        h1 {
+            background-color: #fff;
+            color: var(--bg-color);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            margin-top: 0;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            font-size: 3rem;
+            border-radius: 0 0 12px 0;
+        }
+
+
+
+        p.read {
+
+            font-size: 2.2rem;
+            font-weight: 500;
+            border: none;
+            margin: 0;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            /* margin-top: 12px; */
+            text-align: center;
+        }
+
+        p.read-salmo {
+            font-size: 1.35rem;
+        }
+
+        img.estola {
+            position: absolute;
+            left: 2rem;
+            width: 36px;
+            z-index: 0;
+            top: 10px;
+        }
+    </style>
+
+    <% if(color=='branco' ){ %>
+        <style>
+            main {
+                margin: 10px;
+                /* max-width: 500px; */
+                border-radius: 12px;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                border: 1px solid #E2B65F;
+            }
+
+            .header {
+                align-self: center;
+                text-align: center;
+                background-color: #E2B65F;
+                padding-bottom: 8px;
+                color: #fff;
+            }
+
+            p.tempo {
+                margin-bottom: 4px;
+                margin-top: 16px;
+                /* 
+                font-size: 1.2rem; */
+                opacity: 0.8;
+            }
+
+
+            p.read {
+                margin: 0;
+                padding: 0;
+                padding-top: 6px;
+                padding-bottom: 6px;
+                text-align: center;
+                /* font-size: 1.05rem; */
+                font-weight: bolder;
+                background-color: #c8942b;
+                color: #815909;
+                border: none;
+            }
+
+            h1:not(.read) {
+                border-top: none;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                padding-top: 18px;
+                padding-bottom: 18px;
+                /* font-size: 1.9rem; */
+                color: #c8942b;
+            }
+
+            h1.read {
+                border-top: none;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                margin-top: 12px;
+                /* padding-top: 9px; */
+                padding-bottom: 18px;
+                /* font-size: 1.9rem; */
+                color: #c8942b;
+            }
+        </style>
+        <% } %>
+</head>
+
+<body>
+    <main class="card">
+        <section class="header">
+            <%if(color2){%>
+                <img src="./<%= color2 %>.png" class="estola">
+                <%}else if(color !='preto' ){%> <img src="./<%= color %>.png" class="estola">
+                    <%}%>
+                        <p class="tempo">
+                            <%= season %>
+                                <%= date %>
+                        </p>
+                        <p class="semana">
+                            <%- day.simplified %>
+                        </p>
+                        <p class="another">
+                            <%= day.another %>
+                        </p>
+        </section>
+        <section class="title">
+            <%if(leitura){%>
+                <%if(leitura.toLowerCase().includes('salmo')){%>
+                    <p class="read  read-salmo">
+                        <%= leitura%>
+                    </p>
+                    <%} else {%>
+                        <p class="read">
+                            <%= leitura%>
+                        </p>
+                        <%}%>
+                            <h1 class="read">
+                                <%= title.trim() %>
+                            </h1>
+                            <%}else {%>
+                                <h1 style="justify-self: center; align-self: center;">
+                                    <%= title.trim() %>
+                                </h1>
+                                <%}%>
+
+
+        </section>
+
+    </main>
+</body>
+
+</html>
