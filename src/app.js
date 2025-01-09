@@ -77,7 +77,7 @@ app.get("/", async (req, res) => {
 
     const $next = cheerio.load(nextDay.details)
 
-    let date = dates.find(({ date }) => acDate.fmat("YYYY-MM-DD") === date)
+    let date = dates.find(({ date }) => acDate.format("YYYY-MM-DD") === date)
 
     if (
         (nextDate.format('ddd') == "Sun" ||
