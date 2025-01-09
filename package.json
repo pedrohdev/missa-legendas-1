@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scrape:dev": "nodemon src/scraping.js"
+    "scrape:dev": "nodemon src/scraping.js",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
