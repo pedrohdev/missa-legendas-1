@@ -1,6 +1,6 @@
 # OBS Liturgia Cards
 
-Um aplicativo Node.js para criar **cards de legendas para OBS** voltados à Santa Missa. O sistema gera automaticamente cards para as leituras, salmo, evangelho, homilia e informações litúrgicas, facilitando transmissões online com qualidade e organização.
+Uma aplicação em Node.js e EJS para criar **cards de legendas para OBS** voltados à Santa Missa. O sistema gera automaticamente cards para as leituras, salmo, evangelho, homilia e informações litúrgicas, facilitando transmissões online com qualidade e organização.
 
 ## **Funcionalidades**
 
